@@ -7,7 +7,7 @@ SCC <- readRDS("Source_Classification_Code.rds")
 subset_NEI<-subset(NEI,fips=="24510")
 
 #Plotting a graph and holding it in gplot
-gplot<-qplot(year,Emissions,data=subset_NEI,facets=type~.,geom="smooth",method="lm")
+gplot<-qplot(year,Emissions,data=subset_NEI,facets=type~.,geom="smooth",method="lm")+ ggtitle("Emission Sources : Baltimore : 1999-2008")
 
 #Geenrating a PNG output
 png(file = paste("A2plot3.png", sep=""), width = 480, height = 480)
